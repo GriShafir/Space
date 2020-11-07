@@ -1,0 +1,162 @@
+body {
+    background-color: #1D0078;
+    color: #FFFFFF;
+}
+
+header {
+    grid-area: header;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+}
+
+.main {
+    display: flex;
+    grid-area: main;
+    justify-content: space-between;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+    position: relative;
+    width: 98%;
+}
+    
+.content_1 {
+    grid-area: content_1;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+}
+
+.content_2 {
+    grid-area: content_2;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+}
+
+.content_3 {
+    grid-area: content_3;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+}
+
+.content_4 {
+    grid-area: content_4;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+}
+
+.content_5 {
+    grid-area: content_5;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+}
+
+.content_6 {
+    grid-area: content_6;
+    border: 5px solid white;
+    border-radius: 2mm;
+    margin: 2.5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "content_1 content_2 content_3"
+        "content_1 content_2 content_6"
+        "content_4 content_2 content_6"
+        "content_4 content_5 content_6";
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #989898;
+}
+
+li {
+    display: flex;
+    float: right;
+    margin: 5px;
+}
+
+div {
+    font-family: 'Comic Sans MS';
+}
+
+header div a {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 6px;
+}
+
+/*header nav ul li {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 6px;
+}*/
+
+a {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.space {
+    margin: 12px;
+}
+
+.NIIICE {
+    position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 100%;
+}
+
+@media (min-width: 640px) and (max-width: 789px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "header header "
+        "main main "
+        "content_1 content_4"
+        "content_1 content_4"
+        "content_2 content_6"
+        "content_2 content_6"
+        "content_3 content_5";
+     }
+}  
+
+@media (max-width: 639px) {
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "header"
+        "main"
+        "content_1"
+        "content_2"
+        "content_3"
+        "content_4"
+        "content_5"
+        "content_6";
+     }
+}  
